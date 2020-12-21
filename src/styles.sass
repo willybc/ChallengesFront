@@ -1,1 +1,98 @@
-/* You can add global styles to this file, and also import other style files */
+$gblue : hls(237, 18%, 59%)
+$softred: hsl(345, 95%, 68%)
+$white: hsl(0, 0%, 100%)
+$desblue: hsl(236, 21%, 26%)
+$desblue2: hsl(236, 20%, 34%)
+$vdblue: hsl(235, 16%, 14%)
+$vbblue: hsl(234, 17%, 12%)
+
+body
+    font: 700 14px/1 'Red Hat Text', sans-serif;   
+
+body
+    main 
+        min-height: 100vh;
+        width: 100%;
+        background-image: url(assets/bg-stars.svg);
+        background-color: $vbblue;
+        background-repeat: no-repeat;   
+        bakcground-size: cover;
+        color: $white;
+        
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: justify;
+        justify-content: space-beetween;
+        padding-top: 8em;
+
+h3
+  font-size: 1.5em;
+  margin: 19px 0 109px;
+  letter-spacing: 8px;
+  color: #fff;
+  text-transform: uppercase;
+
+section
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    color: $gblue;
+
+section
+    .timer
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        width: 20%
+
+section
+    .card-box
+        color: $softred;
+        padding: 1.5rem 0;
+        text-align: center; 
+        font-size: 2.4em;
+        border-radius: 3px;
+        background : -webkit-gradient(linear, left top, left bottom, color-stop(50%, $desblue), color-stop(50%, $desblue2))
+        background : linear-gradient($desblue 50%, desblue2 50%)
+        -webkit-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.015), 0 8px 8px rgba(0, 0, 0, 0.035), 0 12px 10px rgba(0, 0, 0, 0.055), 0 16px 12px rgba(0, 0, 0, 0.075);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.015), 0 8px 8px rgba(0, 0, 0, 0.035), 0 12px 10px rgba(0, 0, 0, 0.055), 0 16px 12px rgba(0, 0, 0, 0.075);
+
+section
+    .card-label
+        padding : 1rem 0
+
+footer
+    height: 20vh;
+    background: url(assets/pattern-hills.svg) !important
+    background: no-repeat
+    background-size: cover
+
+footer
+    .social
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin: 4rem auto;
+
