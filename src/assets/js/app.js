@@ -1,45 +1,60 @@
-// (function() {
+const daysDisplayer = document.querySelector(".days-displayer");
+const hoursDisplayer = document.querySelector(".hours-displayer");
+const minutesDisplayer = document.querySelector(".minutes-displayer");
+const secondsDisplayer = document.querySelector(".seconds-displayer");
 
-// Start the countdown at 14 days in seconds (60*60*24*14)
-var count = 1209600;
-var time = [14, 0, 0, 0]; //Days, hours, minutes, seconds
-var labels = ["days", "hours", "minutes", "seconds"];
+var days = parseInt(daysDisplayer.innerHTML);
+var hours = parseInt(hoursDisplayer.innerHTML);
+var minutes = parseInt(minutesDisplayer.innerHTML);
+var seconds = parseInt(secondsDisplayer.innerHTML);
 
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Time calculations for days, hours, minutes and seconds
-  var newTime = [];
-  newTime[0] = Math.floor(count / (60 * 60 * 24));
-  newTime[1] = Math.floor((count % (60 * 60 * 24)) / (60 * 60));
-  newTime[2] = Math.floor((count % (60 * 60)) / (60));
-  newTime[3] = Math.floor(count % 60);
-
-  // Decrement the count by 1 second
-  count--;
-  // console.log(count);
-
-  // Check for changes and execute animation
-  time.forEach(function(v, k) {
-    if (time[k] != newTime[k]) {
-        // console.log(time[k]);
-        // console.log(newTime[k]);
-        time[k] = newTime[k];
-        var element = document.getElementById("js-" + labels[k]);
-        // console.log(element);
-        element.textContent = time[k].toString();
-        element.classList.toggle('js-flip');
-
-        element.onanimationend = () => {
-            element.classList.toggle('js-flip');
-        };
+var counter = ()=>{
+    if(seconds > 0){
+        seconds--
+    } else if(minutes > 0) {
+        minutes--;
+        seconds = 59
+    } else if(hours > 0){
+        hours--;
+        minutes = 59;
+        seconds = 59;
+    } else if(days > 0){
+        days--;
+        hours = 23;
+        minutes = 59;
+        seconds = 59;
     }
-  })
+    
+    daysDisplayer.innerHTML = days > 9 ? days : "0" + days.toString();
+    hoursDisplayer.innerHTML = hours > 9 ? hours : "0" + hours.toString();
+    minutesDisplayer.innerHTML = minutes > 9 ? minutes : "0" + minutes.toString();
+    secondsDisplayer.innerHTML = seconds > 9 ? seconds : "0" + seconds.toString();
+}
+//Intento 1
+var x = function () {
+    console.log('entro 1');
 
-  // If the count down is finished, clearInterval
-  if (count < 0) {
-    clearInterval(x);
-  }
-}, 1000);
+    //No funciona
+    window.onload = function(){
+        window.setInterval(counter, 1000);
+        console.log('entro?')
+    }
 
-// })();
+    window.addEventListener("load", ()=>{
+        window.setInterval(counter, 1000);
+        console.log('entro 2');
+    })
+}
+
+
+//Intento 2
+document.getElementById("myBtn").onclick = x;
+
+document.getElementById("myBtn").addEventListener("click", function (event) {
+    console.log('entro x1')
+    window.addEventListener("load", ()=>{
+        window.setInterval(counter, 1000);
+        console.log('entro x2')
+    })
+});
+

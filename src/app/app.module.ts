@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 //Inicio Servicio
-import { UpdscriptsService } from "./updscripts.service"
+import { UpdscriptsService } from "./updscripts.service";
+import { CountdownComponent } from './countdown/countdown.component'
 //Fin Servicio
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,
