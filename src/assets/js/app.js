@@ -7,6 +7,7 @@ var days = parseInt(daysDisplayer.innerHTML);
 var hours = parseInt(hoursDisplayer.innerHTML);
 var minutes = parseInt(minutesDisplayer.innerHTML);
 var seconds = parseInt(secondsDisplayer.innerHTML);
+    
 
 var counter = ()=>{
     if(seconds > 0){
@@ -45,11 +46,9 @@ var x = function () {
         console.log('entro 2');
     })
 }
-
-
-//Intento 2
 document.getElementById("myBtn").onclick = x;
 
+//Intento 2
 document.getElementById("myBtn").addEventListener("click", function (event) {
     console.log('entro x1')
     window.addEventListener("load", ()=>{
