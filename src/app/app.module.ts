@@ -9,14 +9,26 @@ import { UpdscriptsService } from "./updscripts.service";
 import { CountdownComponent } from './countdown/countdown.component'
 //Fin Servicio
 
+import {MatTreeModule} from '@angular/material/tree';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import {MatListModule} from '@angular/material/list';
+import { ProfilecardComponent } from './profilecard/profilecard.component';
+import {MatSliderModule} from '@angular/material/slider';
+
 @NgModule({
   declarations: [
     AppComponent,
-    CountdownComponent
+    CountdownComponent,
+    ProfilecardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatSliderModule,
+    BrowserAnimationsModule,
+    MatListModule,
+    MatTreeModule,
   ],
   providers: [
     UpdscriptsService
