@@ -1,15 +1,1 @@
-<mat-grid-list cols="2" rowHeight="4:3">
-
-    <mat-list>
-        <div mat-subheader>Proyectos</div>
-        <mat-list-item *ngFor="let folder of folders">
-          <mat-icon mat-list-icon>folder</mat-icon>
-          <div mat-line><a routerLink={{folder.name}}>{{folder.name}}</a></div>
-          <div mat-line> {{folder.updated | date}} </div>
-        </mat-list-item>
-        <mat-divider></mat-divider>
-      </mat-list>
-    
-</mat-grid-list>
-
 <router-outlet></router-outlet>
