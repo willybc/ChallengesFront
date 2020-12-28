@@ -1,15 +1,15 @@
+<mat-grid-list cols="2" rowHeight="4:3">
 
-
-<div class="container">
-    <ul>Proyectos
-        <li><a href="">Inicio</a></li>
-        <li><a routerLink="Countdown">Countdown</a></li>
-        <li><a routerLink="ProfileCard">ProfileCard</a></li>
-    </ul>
-
-    <mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+    <mat-list>
+        <div mat-subheader>Proyectos</div>
+        <mat-list-item *ngFor="let folder of folders">
+          <mat-icon mat-list-icon>folder</mat-icon>
+          <div mat-line><a routerLink={{folder.name}}>{{folder.name}}</a></div>
+          <div mat-line> {{folder.updated | date}} </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
     
-  
-</div>
+</mat-grid-list>
 
 <router-outlet></router-outlet>

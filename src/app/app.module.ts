@@ -15,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatListModule} from '@angular/material/list';
 import { ProfilecardComponent } from './profilecard/profilecard.component';
 import {MatSliderModule} from '@angular/material/slider';
-
+import {MatIconModule} from '@angular/material/icon';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,8 @@ import {MatSliderModule} from '@angular/material/slider';
     BrowserAnimationsModule,
     MatListModule,
     MatTreeModule,
+    MatIconModule,
+    MatGridListModule
   ],
   providers: [
     UpdscriptsService
