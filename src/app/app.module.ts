@@ -19,13 +19,15 @@ import {MatListModule} from '@angular/material/list';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
+import { PodRequestComponent } from './pod-request/pod-request.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CountdownComponent,
     ProfilecardComponent,
-    HomeComponent
+    HomeComponent,
+    PodRequestComponent
   ],
   imports: [
     BrowserModule,

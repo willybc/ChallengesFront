@@ -25,6 +25,10 @@ export class HomeComponent implements OnInit {
     {
       name: 'ProfileCard',
       updated: new Date('12/28/20'),
+    },
+    {
+      name: 'PodRequest',
+      updated: new Date('12/28/20'),
     }
   ];
   notes: Section[] = [
