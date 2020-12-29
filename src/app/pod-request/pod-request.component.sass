@@ -1,0 +1,136 @@
+$bcg : #121725
+$primary : #54E6AF
+$light-grey : #C2CBE5
+$blueish-grey : #5A668A
+$dark-blueish-grey : #2C344B
+$white: #fff
+
+
+a,button,input
+    font-family: Chivo,sans-serif
+    font-size: 14px
+
+.wrapper
+    height: 70%
+    min-height: 540px
+    min-width: 90%
+    max-width: 1100px
+    margin: 6% 0
+    margin-left: 10%
+    position: absolute
+    right: 0
+
+.image-host-container
+    width: 62%
+    height: 100%
+    background: url('../../assets/post-request/image-host.jpg')
+    background-position: top right
+    background-size: cover
+    background-repeat: no-repeat
+    position: absolute
+    right: 0
+
+.content
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    position: absolute
+    padding-top: 10px
+    left: 0
+    bottom: 0
+    height: 84%
+    width: 58%
+    background-color: $bcg
+
+.content
+    .title
+        font-size: 2.7em
+        text-transform: uppercase
+        font-weight: 300
+        color: $primary
+        width: 100%
+
+.content
+    .second
+        color: $white   
+
+#secondary
+    margin: -60px 0 0 0
+
+.content
+    p
+        /* margin-top: 1.4em; */
+        width: 65%
+        color: $light-grey
+        line-height: 28px
+        font-weight: 300
+
+
+
+/* form
+    margin-top: 2em
+ */
+
+.input-container
+    width: 65%
+    height: 55px
+    border-radius: 26px
+    background-color: $dark-blueish-grey
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 4px
+
+input.email
+    margin-left: 2em
+    outline: none
+    background-color: $dark-blueish-grey
+    height: 100%
+    width: 100%
+    /* color:var(--light-grey); */
+    border: none
+
+input.email::placeholder
+    color: $light-grey
+
+button.submit
+    transition: background .24s ease
+    cursor: pointer
+    border-radius: 24px
+    height: 100%
+    width: 320px
+    background-color: var(--primary)
+    border: none
+    outline: none
+    font-weight: bold
+
+button.submit:hover
+    background-color:#B3FFE2
+
+.socials
+    display: flex
+    position: absolute
+    bottom: 0
+    left: 0
+    justify-content: space-between
+    align-items: center
+    margin-top: 34px
+    width: 70%
+    min-width: 540px
+
+.deco
+    position: absolute
+    bottom: -52px
+    right: 0px
+    /* height:100px; */
+
+.deco-2
+    display: none
+
+.logo
+    position: absolute
+    top: -24px
+    left: 0
+    height: 58px
+
+
