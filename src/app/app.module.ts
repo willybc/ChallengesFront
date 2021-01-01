@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { CountdownComponent } from './countdown/countdown.component'
 import { ProfilecardComponent } from './profilecard/profilecard.component';
 import { HomeComponent } from './home/home.component';
+import { PodRequestComponent } from './pod-request/pod-request.component';
+import { FaqAccordionComponent } from './faq-accordion/faq-accordion.component';
 
 //Inicio Servicio
 import { UpdscriptsService } from "./updscripts.service";
@@ -19,7 +21,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatSliderModule} from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
-import { PodRequestComponent } from './pod-request/pod-request.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,8 @@ import { PodRequestComponent } from './pod-request/pod-request.component';
     CountdownComponent,
     ProfilecardComponent,
     HomeComponent,
-    PodRequestComponent
+    PodRequestComponent,
+    FaqAccordionComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import { PodRequestComponent } from './pod-request/pod-request.component';
     MatListModule,
     MatTreeModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatExpansionModule,
   ],
   providers: [
     UpdscriptsService
